@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     let makeUp = UIImage(named: "m3")!
-    let noMakeUp = UIImage(named: "n5")!
+    let noMakeUp = UIImage(named: "n13")!
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         // Create the SwiftUI view that provides the window contents.
