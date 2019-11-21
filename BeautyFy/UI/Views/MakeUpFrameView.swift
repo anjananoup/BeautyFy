@@ -17,7 +17,7 @@ struct MakeUpFrameView: View {
             .resizable()
             .frame(width: frameSize, height: frameSize)
             .border(Color.gray.opacity(0.5), width: 1)
-            .cornerRadius(5)
+            .cornerRadius(10)
     }
 }
 
