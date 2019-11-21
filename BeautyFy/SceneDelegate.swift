@@ -12,25 +12,14 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-    let makeUp = UIImage(named: "m3")!
-    let noMakeUp = UIImage(named: "n13")!
+    // Create the SwiftUI binder that provides the window contents.
+    let userData = UserData()
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        MakeUpMLManager.instance.makeOver(makeUpModel: makeUp, noMakeUpModel: noMakeUp) { result in
-            switch result {
-            case .success(let makeOverImage):
-                print("MakeOver Completed Succcessfully, size: \(makeOverImage)")
-            case .failure(let error):
-                print("Makeover Faild: \(error.localizedDescription)")
-            }
-        }
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: ContentView().environmentObject(userData))
             self.window = window
             window.makeKeyAndVisible()
         }

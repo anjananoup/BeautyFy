@@ -12,4 +12,6 @@ import SwiftUI
 final class UserData: ObservableObject {
     @Published var makeUpModels = makeUpData
     @Published var noMakeUpModels = noMakeUpData
+    @Published var inputMakeUp = makeUpData[0].image
+    @Published var inputNoMakeUp = noMakeUpData[0].image
 }

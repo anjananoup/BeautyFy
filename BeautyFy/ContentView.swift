@@ -16,7 +16,8 @@ struct ContentView: View {
         UITableView.appearance().separatorStyle = .none
     }
 
-    let userdata = UserData()
+    @EnvironmentObject var userdata: UserData
+
     var body: some View {
         NavigationView {
             List {
@@ -25,7 +26,10 @@ struct ContentView: View {
                     ScrollView(.horizontal, content: {
                         HStack(spacing: 10) {
                             ForEach(userdata.makeUpModels) { model in
-                                MakeUpCellView(status: model)
+                                MakeUpCellView(status: model).gesture(TapGesture().onEnded({ _ in
+                                    self.userdata.inputMakeUp = model.image
+                                    print("I am taped: \(model.image)")
+                                }))
                             }
                         }.padding(.leading, 10)
                     })
@@ -36,11 +40,26 @@ struct ContentView: View {
                     ScrollView(.horizontal, content: {
                         HStack(spacing: 10) {
                             ForEach(userdata.noMakeUpModels) { model in
-                                MakeUpCellView(status: model)
+                                MakeUpCellView(status: model).gesture(TapGesture().onEnded({ _ in
+                                    self.userdata.inputNoMakeUp = model.image
+                                    print("I am taped: \(model.image)")
+                                }))
                             }
                         }.padding(.leading, 10)
                     })
                 }
+                
+                Spacer()
+                
+                VStack(spacing: 10) {
+                    Text("Outputs")
+                    HStack(spacing: 10) {
+                        Spacer()
+                        MakeUpOutputFrameView(makeUpImage: userdata.inputMakeUp, noMakeUpImage: userdata.inputNoMakeUp, frameSize: 256)
+                        Spacer()
+                    }
+                }
+                
             }
             .padding(.leading, -20)
             .padding(.trailing, -20)

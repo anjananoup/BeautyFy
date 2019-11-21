@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		555F79F7238715B30036F05D /* MakeUpFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F79F6238715B30036F05D /* MakeUpFrameView.swift */; };
 		555F79FA23871C010036F05D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F79F923871C010036F05D /* ImageModel.swift */; };
 		555F79FC23871DE00036F05D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F79FB23871DE00036F05D /* Data.swift */; };
 		555F79FE238725970036F05D /* MakeUpModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F79FD238725970036F05D /* MakeUpModelView.swift */; };
 		555F7A002387280A0036F05D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F79FF2387280A0036F05D /* UserData.swift */; };
+		555F7A02238737980036F05D /* CircularProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F7A01238737980036F05D /* CircularProgressIndicator.swift */; };
+		555F7A042387390C0036F05D /* MakeUpOutputFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F7A032387390C0036F05D /* MakeUpOutputFrameView.swift */; };
 		55BCC8102385C963000BB2D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BCC80F2385C963000BB2D6 /* AppDelegate.swift */; };
 		55BCC8122385C963000BB2D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BCC8112385C963000BB2D6 /* SceneDelegate.swift */; };
 		55BCC8142385C963000BB2D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BCC8132385C963000BB2D6 /* ContentView.swift */; };
@@ -39,11 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		555F79F6238715B30036F05D /* MakeUpFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUpFrameView.swift; sourceTree = "<group>"; };
 		555F79F923871C010036F05D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		555F79FB23871DE00036F05D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		555F79FD238725970036F05D /* MakeUpModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUpModelView.swift; sourceTree = "<group>"; };
 		555F79FF2387280A0036F05D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		555F7A01238737980036F05D /* CircularProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressIndicator.swift; sourceTree = "<group>"; };
+		555F7A032387390C0036F05D /* MakeUpOutputFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUpOutputFrameView.swift; sourceTree = "<group>"; };
 		55BCC80C2385C963000BB2D6 /* BeautyFy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyFy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BCC80F2385C963000BB2D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BCC8112385C963000BB2D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +88,9 @@
 		555F79F5238715870036F05D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				555F79F6238715B30036F05D /* MakeUpFrameView.swift */,
 				555F79FD238725970036F05D /* MakeUpModelView.swift */,
+				555F7A01238737980036F05D /* CircularProgressIndicator.swift */,
+				555F7A032387390C0036F05D /* MakeUpOutputFrameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,14 +291,15 @@
 				55BCC86E2385D044000BB2D6 /* MLModel+Images.swift in Sources */,
 				555F79FA23871C010036F05D /* ImageModel.swift in Sources */,
 				55BCC8652385D044000BB2D6 /* CoreML+Combine.swift in Sources */,
-				555F79F7238715B30036F05D /* MakeUpFrameView.swift in Sources */,
 				55BCC8642385D044000BB2D6 /* CGImagePropertyOrientation.swift in Sources */,
 				55BCC8672385D044000BB2D6 /* UIImage+CVPixelBuffer.swift in Sources */,
+				555F7A042387390C0036F05D /* MakeUpOutputFrameView.swift in Sources */,
 				55BCC86D2385D044000BB2D6 /* NonMaxSuppression.swift in Sources */,
 				55BCC8752385D2FD000BB2D6 /* AppError.swift in Sources */,
 				55BCC8712385D044000BB2D6 /* UIImage+Extensions.swift in Sources */,
 				55BCC8702385D044000BB2D6 /* MLMultiArray+Helpers.swift in Sources */,
 				55BCC8142385C963000BB2D6 /* ContentView.swift in Sources */,
+				555F7A02238737980036F05D /* CircularProgressIndicator.swift in Sources */,
 				55BCC8732385D070000BB2D6 /* MakeUpMLManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
